@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_tags",
+  "info": {
+    "name": "Project Tags",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectTag": {
+      "type": "string"
+    },
+    "projects": {
+      "via": "project_tags",
+      "collection": "project"
+    },
+    "fontColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}

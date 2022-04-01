@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "datePublished": {
+      "type": "date"
+    },
+    "projectLongDescription": {
+      "type": "richtext"
+    },
+    "projectShortDescription": {
+      "type": "text"
+    },
+    "projectImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "featuredProject": {
+      "type": "boolean"
+    },
+    "logoImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "projectImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "project_tags": {
+      "via": "projects",
+      "collection": "project-tags",
+      "dominant": true
+    },
+    "projectLink": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "titleTag": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
